@@ -10,6 +10,11 @@ function isValidSubsequence(array, sequence) {
     let comparisonArr = [];
 
     sequence.forEach(element => {
+      //If they were strings
+      // var comparisonArr = [...s];
+      // var sequence = [...t];
+
+
       if(array.includes(element)) {
         comparisonArr.push(element);
       } else {
