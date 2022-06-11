@@ -1,6 +1,7 @@
 //We'll pass you an array of two numbers. Return the sum of those two numbers plus the sum of all the numbers between them. 
 //The lowest number will not always come first.
 
+//Solution 1: binary search approach
 function sumAll(arr) {
 
   let acc = 0;
@@ -14,6 +15,17 @@ function sumAll(arr) {
       acc += i;
     }
   }
+  return acc;
+}
+
+//Solution 2: Math.max()/.min() spread operator
+function sumAll(arr) {
+  let acc = 0;
+
+  for (let i = Math.min(...arr); i <= Math.max(...arr); i++) {
+    acc += i;
+  }
+  
   return acc;
 }
 
