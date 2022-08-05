@@ -34,3 +34,41 @@ function same(arr1, arr2) {
 }
 
 same([1, 3, 2, 2], [4, 9, 1, 4])
+
+Refactor
+- Adding multiple loops instead of nested loops
+- Utilizing objects and assigning key-value pairs and increasing # of occurrences
+
+function same(arr, arr2) {
+  if(arr1.length !== arr2.length) {
+    return false;
+  }
+  //Create shallow objects for each arr
+  let counterObj1 = {};
+  let counterObj2 = {};
+  
+  //three loops
+  // 1. adding/incrementing counterObj1
+  // 2. same thing but for counterObj2
+  // 3. Compare the two objects and see if counterObj1 ** 2 !== counterObj2, return false 
+  // Return true 
+  
+  for(let val of arr1){
+    if(counterObj1[val]) {
+      counterObj1[val] += 1;
+    } else {
+      counterObj1[val] = 1;
+    }
+  }
+  
+  for(let val of arr2){
+    if(counterObj2[val]) {
+      counterObj2[val] += 1;
+    } else {
+      counterObj2[val] = 1;
+    }
+  }
+  
+  return true;
+  
+}
