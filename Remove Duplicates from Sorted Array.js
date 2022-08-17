@@ -3,15 +3,21 @@
 //Two pointer approach: searching 'pairs' in a 'sorted' array 
 //Examples of this approach: One slow-runner and the other fast-runner. One pointer starts from the beginning while the other pointer starts from the end.
 
-var removeDuplicates = function(nums) {
-    for (let i = 0; i < nums.length; i++) {
-        for (let j = 1; j < nums.length, j++) {
-          if (nums[i] === nums[j] {
-              continue
-            }
-        }
-    }
+// var removeDuplicates = function(nums) {
+//     for (let i = 0; i < nums.length; i++) {
+//         for (let j = 1; j < nums.length, j++) {
+//           if (nums[i] === nums[j] {
+//               continue
+//             }
+//         }
+//     }
 
-};
-  
-removeDuplicates([1, 1, 2]);
+// };
+
+
+const removeDuplicates = (arr) => {
+    let b = arr.filter((ele, index, arr) => ele !== arr[index - 1]);
+    console.log(b);
+}
+
+removeDuplicates([1, 1, 2]); 
